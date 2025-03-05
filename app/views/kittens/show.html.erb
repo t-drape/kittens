@@ -6,4 +6,11 @@
   <li>Softness: <%= @kitten.softness %></li>
 </ul>
 
-<%= link_to "Change", edit_kitten_path %>
+<div><%= link_to "Change", edit_kitten_path %></div>
+<div><%= link_to "Home", :root %></div>
+<div><%= link_to "Remove Kitten", @kitten, data: { turbo_method: "delete" } %></div>
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>

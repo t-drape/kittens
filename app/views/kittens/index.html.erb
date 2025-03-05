@@ -2,10 +2,23 @@
 <h2>Cuteness and Softness on a Scale of 10</h2>
 
 <ul>
-  <% @kittens.each do |k| %>
-    <li>
-      <h3><%= k.name %></h3>
-      <%= link_to "View this Kitten", k %>
-    </li>
+  <% if @kittens %>
+    <% @kittens.each do |k| %>
+      <li>
+        <div>
+          <%= k.name %>
+          <%= link_to "View this Kitten", k %>
+          <%= link_to "Remove Kitten", k, data: { turbo_method: "delete" } %>
+        </div>
+      </li>
+    <% end %>
+  <% else %>
+    <h3>No Kittens Right Now! <%= link_to "Create a Kitten", new_kitten_path %></h3>
   <% end %>
 </ul>
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+<%= link_to "Create a Kitten", new_kitten_path %>

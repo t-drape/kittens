@@ -1,3 +1,8 @@
 <h1>Create a new Kitten:</h1>
 
-<%= render "kitten_form" %>
+<%= render partial: "kittens/kitten_form", :locals => { :kitten => @kitten } %>
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>

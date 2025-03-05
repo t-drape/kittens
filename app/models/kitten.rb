@@ -1,24 +1,6 @@
 class Kitten < ApplicationRecord
-  def index
-    @kittens = Kitten.all
-  end
-
-  def show
-    @kitten = Kitten.find(id: params[:id])
-  end
-
-  def new
-    @kitten = Kitten.new
-  end
-
-  def create
-    @kitten = Kitten.find(id: params[:id])
-
-    if @kitten.save
-      redirect_to @kitten
-    else
-      flash.now[:error] = "Fix your mistakes please!"
-      render :new, status: :unprocessable_entity
-    end
-  end
+  validates :name, presence: true, length: {in: 4..10}
+  validates :age, presence: true, comparison: { greater_than: 0 }
+  validates :cuteness, presence: true, comparison: { greater_than: 0, less_than_or_equal_to: 10 }
+  validates :softness, presence: true, comparison: { greater_than: 0, less_than_or_equal_to: 10 }
 end

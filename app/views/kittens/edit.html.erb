@@ -1,3 +1,4 @@
 <h1>Edit this Kitten:</h1>
 
 <%= render "kitten_form" %>
+<div><%= link_to "Remove Kitten", @kitten, data: { turbo_method: "delete" } %></div>
