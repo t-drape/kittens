@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+This is my very first API! Let's see how this goes...
+
+Helpful article for form field of float:
+url: https://stackoverflow.com/questions/28463020/rails-t-text-field-for-floats-value

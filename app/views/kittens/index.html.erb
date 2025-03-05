@@ -1,0 +1,11 @@
+<h1>Our Kittens</h1>
+<h2>Cuteness and Softness on a Scale of 10</h2>
+
+<ul>
+  <% @kittens.each do |k| %>
+    <li>
+      <h3><%= k.name %></h3>
+      <%= link_to "View this Kitten", k %>
+    </li>
+  <% end %>
+</ul>
