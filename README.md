@@ -28,5 +28,5 @@ This is my very first API! Let's see how this goes...
 I only ran into one error for this project: Deleting the kittens. I forgot how to do this, and, I don't know what syntax error I had, but the turbo method did not seem to be working. After around 30 minutes, I re-typed the turbo way, and Voila! (It worked)
 
 Helpful article for form field of float:
-url: https://stackoverflow.com/questions/28463020/rails-t-text-field-for-floats-value
+https://stackoverflow.com/questions/28463020/rails-t-text-field-for-floats-value
 
