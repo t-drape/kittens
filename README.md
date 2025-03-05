@@ -29,3 +29,4 @@ I only ran into one error for this project: Deleting the kittens. I forgot how t
 
 Helpful article for form field of float:
 url: https://stackoverflow.com/questions/28463020/rails-t-text-field-for-floats-value
+
